@@ -5,8 +5,8 @@ import "fmt"
 func main() {
 	var i int = 10
 	var name string = "Sarath"
-	var points = 10.50
-	var isEnabled = true
+	var points float32 = 10.50
+	var isEnabled bool = true
 
 	fmt.Printf("Number is %v %T", i, i)
 	fmt.Printf("\nName is %v %T", name, name)

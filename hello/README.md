@@ -1,5 +1,6 @@
-# Simpel hello World Program
+# Simple hello World Program
 
-Run program by 'go run hello.go'
-
+## Install packages 
 module initialize go.mod using go mod hello init
+## Run
+'go run hello.go
