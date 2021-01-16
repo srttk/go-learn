@@ -14,4 +14,12 @@ func main() {
 	}
 
 	fmt.Println("Result ", gopath)
+
+	// Execute
+
+	cmd := exec.Command("ls", "-l")
+	stdout, err := cmd.Output()
+
+	fmt.Println(string(stdout))
+
 }
