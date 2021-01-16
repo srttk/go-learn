@@ -43,4 +43,8 @@ func main() {
 
 	// Array operations
 
+	var players = [3]int{1, 2, 3}
+	ref := &players
+	fmt.Println(*ref)
+
 }
