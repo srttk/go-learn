@@ -32,4 +32,14 @@ func main() {
 	langs["node"] = 5
 	langs["php"] = 4
 
+	// Length
+
+	fmt.Println("Length of map langs ", len(langs))
+
+	// Remove from map
+
+	delete(langs, "php")
+
+	fmt.Println("after delete ", langs)
+
 }
