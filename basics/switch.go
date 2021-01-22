@@ -39,4 +39,43 @@ func main() {
 	default:
 		fmt.Println("Afternoon 🕓")
 	}
+
+	// multiple case
+
+	switch 2 {
+	case 2, 4, 6:
+		fmt.Println("two four or six")
+	case 1, 3, 5:
+		fmt.Println("one three or five")
+
+	default:
+		fmt.Println("another number")
+	}
+
+	// inittializer example
+	val := 6
+	switch result := val * 10; result {
+	case 20, 30, 40:
+		fmt.Println("20,30,40")
+	case 50, 60, 70:
+		fmt.Println("50,60,70")
+	default:
+		fmt.Println("Other result")
+	}
+
+	// Tagless and fallthrough
+
+	j := 10
+
+	switch {
+	case j <= 10:
+		fmt.Println("j less than or equal to 10")
+		fallthrough
+	case j <= 20:
+		fmt.Println("j less than or equal to 20")
+
+	default:
+		fmt.Println("j greatr than 20")
+	}
+
 }
