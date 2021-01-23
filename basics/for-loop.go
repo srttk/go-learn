@@ -28,4 +28,16 @@ func main() {
 		fmt.Println(n, "is odd")
 	}
 
+	// Range : loop throgh arrays,slices, map, string, channels
+
+	colors := []string{"red", "blue", "green"}
+
+	for key, value := range colors {
+		fmt.Println(" key  :", key, ", value:", value)
+	}
+
+	for _, char := range "Hello World" {
+		fmt.Print(string(char), "-")
+	}
+
 }
