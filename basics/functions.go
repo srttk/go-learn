@@ -141,7 +141,7 @@ func main() {
 
 	// Anonymous function with signature
 
-	var goodbye func(name string) string
+	var goodbye func(string) string
 
 	goodbye = func(name string) string {
 
