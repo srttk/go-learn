@@ -15,6 +15,10 @@ func main() {
 		// Get query params
 		msg := r.URL.Query().Get(("msg"))
 
+		if msg == "" {
+			msg = "No message"
+		}
+
 		// Set Headers
 		w.Header().Set("Content-Type", "text/html")
 
