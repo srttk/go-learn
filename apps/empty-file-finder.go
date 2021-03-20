@@ -10,11 +10,24 @@ func main() {
 
 	args := os.Args[1:]
 
-	if len(args) == 0 {
-		fmt.Println("Provide a directry")
+	// Set default directory as current directory
+	directory := "."
+	directoryLabel := "current"
+
+	if len(args) != 0 {
+		directory = args[0]
 	}
 
-	files, error := ioutil.ReadDir(args[0])
+	switch directory {
+	case ".":
+		directoryLabel = "current"
+	case "..", "../":
+		directoryLabel = "parent"
+	default:
+		directoryLabel = directory
+	}
+
+	files, error := ioutil.ReadDir(directory)
 
 	if error != nil {
 		fmt.Println("Directory read error")
@@ -35,11 +48,11 @@ func main() {
 	}
 
 	if len(emptyFiles) == 0 {
-		fmt.Println("✅  No empty files found ")
+		fmt.Println("✅  No empty files found in ", directoryLabel, " directory")
 		return
 	}
 
-	fmt.Printf("⚠️  %d empty files found \n", len(emptyFiles))
+	fmt.Printf("⚠️  %d empty files found in %s directory \n", len(emptyFiles), directoryLabel)
 
 	for _, filename := range emptyFiles {
 
