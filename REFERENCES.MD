@@ -1,3 +1,7 @@
+# GO Learn
+
+![Go Learn Logo](golearn-panada-logo.jpeg)
+
 ### Basic
 - [Basics with examples](https://gobyexample.com/)
 - [How to build and install go : Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-build-and-install-go-programs)
